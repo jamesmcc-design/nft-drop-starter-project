@@ -171,7 +171,7 @@ const CandyMachine = ({ walletAddress }) => {
         ),
       ];
 
-      const provider = getProvider();
+      const provider = Provider();
       const idl = await Program.fetchIdl(candyMachineProgram, provider);
       const program = new Program(idl, candyMachineProgram, provider);
 
