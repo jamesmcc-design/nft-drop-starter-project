@@ -62,9 +62,9 @@ const App = () => {
           <p className="header">🍭 Candy Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
           {!walletAddress ?
-            Button("Connect to wallet" , connectWallet)
+            <Button title="Connect to wallet"  onClick={connectWallet} style="cta-button connect-wallet-button" />
             :
-            Button("You're Connected", null)
+            <Button title="You're Connected"  onClick={null}  style="cta-button connect-wallet-button" />
           }
         </div>
         {walletAddress && <CandyMachine walletAddress={window.solana} />}
